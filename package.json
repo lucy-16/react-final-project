@@ -2,11 +2,13 @@
   "name": "final-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lucy-16.github.io/react-final-project",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^4.5.2",
+    "gh-pages": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -14,8 +16,6 @@
     "reactstrap": "^8.6.0",
     "rsuite": "^5.15.2",
     "web-vitals": "^2.1.4"
-
-    
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,7 +25,8 @@
     "lint": "eslint src/**/*.js",
     "format": "prettier --write src/**/*.js",
     "format:lint": "npm run format && npm run lint",
-    "clear": "rimraf build"
+    "clear": "rimraf build",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +48,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint":"^6.6.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
